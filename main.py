@@ -30,10 +30,10 @@ class Auto:
          for i in self.asiento:
             if i!=None:
                 if i.registro!=self.registro:
-                    return 'Las piezas no son originales'
+                    return ('Las piezas no son originales')
          if self.registro!=self.motor.registro:
-            return 'Las piezas no son originales'
-         return'Auto original'
+            return ('Las piezas no son originales')
+         return ('Auto original')
 
 
 
