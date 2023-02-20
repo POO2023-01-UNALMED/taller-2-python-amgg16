@@ -28,13 +28,15 @@ class Auto:
     
     def verificarIntegridad(self):
         result=True
-        for i in self.asiento:
-            if i!=None:
-                if i.registro!=self.registro:
-                    result=False 
-                    break
-        if self.registro!=self.motor.registro:
+        if self.registro!=Motor.registro:
             result=False
+        else:
+            for i in self.asiento:
+                if i!=None:
+                    if i.registro==self.registro:
+                        result=False 
+                        break
+
 
         if result==True:
             return 'Auto original'
