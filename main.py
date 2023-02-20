@@ -27,15 +27,15 @@ class Auto:
         return total
     
     def verificarIntegridad(self):
-        result=True
-        if self.registro!=Motor.registro:
-            result=False
-        else:
+        result=False
+        if self.registro==Motor.registro:
             for i in self.asiento:
                 if i!=None:
                     if i.registro==self.registro:
-                        result=False 
-                        break
+                        result=True
+                    if i.registro!=self.resgistro:
+                        result=False
+                        break 
 
 
         if result==True:
